@@ -5,9 +5,8 @@ package com.wangcan.design.pattern.factory;
  * @date: 2021/7/3 10:16
  * 普通工厂
  */
-public class JdbcFactory extends AbstractFactory {
+public class JdbcFactory  {
 
-    @Override
     public IJdbc getClient(String jdbcType) {
         switch (jdbcType) {
             case "mysql":
@@ -31,18 +30,4 @@ public class JdbcFactory extends AbstractFactory {
         jdbcClient.query();
         oracle.query();
     }
-
-    /**
-     * 抽象工厂 相对于普通工厂 上面多了一层抽象工厂，用来创建工厂
-     * @param args
-     */
-//    public static void main(String[] args) {
-//        // 通过抽象工厂 获取jdbc工厂
-//        AbstractFactory factory = getFactory("jdbc");
-//        // 通过jdbc执行查询
-//        IJdbc jdbc = factory.getClient("mysql");
-//        jdbc.query();
-//    }
-
-
 }
