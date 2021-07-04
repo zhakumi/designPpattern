@@ -1,6 +1,5 @@
 package com.wangcan.design.pattern.decorator;
 
-import static com.sun.corba.se.impl.util.RepositoryId.cache;
 
 /**
  * @author: wangcan

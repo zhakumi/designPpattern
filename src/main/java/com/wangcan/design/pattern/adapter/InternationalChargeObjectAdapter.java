@@ -2,26 +2,25 @@ package com.wangcan.design.pattern.adapter;
 
 /**
  * @author: wangcan
- * @date: 2021/7/4 8:49
- * 对象适配器模式  组合
+ * @date: 2021/7/4 8:49 对象适配器模式  组合
  */
-public class InternationalChargeObjectAdapter  implements IInternationalCharge {
+public class InternationalChargeObjectAdapter implements ICharge {
 
-    private IChinaCharge iChinaCharge;
+    private ICharge iChinaCharge;
 
-    public InternationalChargeObjectAdapter(IChinaCharge iChinaCharge){
-        this.iChinaCharge=iChinaCharge;
+    public InternationalChargeObjectAdapter(ICharge iChinaCharge) {
+        this.iChinaCharge = iChinaCharge;
     }
 
     @Override
     public void charge() {
         System.out.println("change international -> chain");
-        iChinaCharge.chainCharge();
+        iChinaCharge.charge();
     }
 
     public static void main(String[] args) {
-        IChinaCharge charge=new ChainCharge();
-        InternationalChargeObjectAdapter adapter=new InternationalChargeObjectAdapter(charge);
+        ICharge charge = new ChainCharge();
+        InternationalChargeObjectAdapter adapter = new InternationalChargeObjectAdapter(charge);
         adapter.charge();
     }
 }
