@@ -6,8 +6,8 @@ package com.wangcan.design.pattern.facade;
  */
 public class Computer {
 
-    private Cpu cpu;
-    private Memory memory;
+    private final Cpu cpu;
+    private final Memory memory;
 
     public Computer(Cpu cpu, Memory memory) {
         this.cpu = cpu;
