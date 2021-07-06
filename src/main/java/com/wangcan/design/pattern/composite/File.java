@@ -11,7 +11,7 @@ public class File implements Component {
 
     public File(String name, String content) {
         this.name = name;
-        this.content = name;
+        this.content = content;
     }
 
     @Override

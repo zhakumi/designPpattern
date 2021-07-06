@@ -6,16 +6,16 @@ package com.wangcan.design.pattern.adapter;
  */
 public class InternationalChargeObjectAdapter implements ICharge {
 
-    private ICharge iChinaCharge;
+    private final ICharge iCharge;
 
-    public InternationalChargeObjectAdapter(ICharge iChinaCharge) {
-        this.iChinaCharge = iChinaCharge;
+    public InternationalChargeObjectAdapter(ICharge iCharge) {
+        this.iCharge = iCharge;
     }
 
     @Override
     public void charge() {
         System.out.println("change international -> chain");
-        iChinaCharge.charge();
+        iCharge.charge();
     }
 
     public static void main(String[] args) {
