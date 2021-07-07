@@ -27,17 +27,15 @@ public class List implements Container {
 
         @Override
         public Object getNext() {
-            if (this.hasNext()) {
-                return list[index++];
-            }
-            return null;
+            return list[index++];
         }
     }
 
     public static void main(String[] args) {
         List list = new List();
-        for(Iteartor iter = list.getIterator(); list.getIterator().hasNext();){
-            System.out.println(iter.getNext());
+        Iteartor iteartor = list.getIterator();
+        while (iteartor.hasNext()) {
+            System.out.println(iteartor.getNext());
         }
     }
 }
