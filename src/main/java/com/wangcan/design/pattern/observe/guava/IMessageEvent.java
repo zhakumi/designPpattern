@@ -1,4 +1,4 @@
-package com.wangcan.design.pattern.observe;
+package com.wangcan.design.pattern.observe.guava;
 
 /**
  * @Author: wangcan
