@@ -5,7 +5,7 @@ package com.wangcan.design.pattern.observe;
  * @date: 2021/7/7 21:16
  * 微信观察者
  */
-public class WchatSendObserve implements IMessageSendObserve {
+public class WechatSendObserve implements IMessageSendObserve {
 
     @Override
     public void send(String message) {
